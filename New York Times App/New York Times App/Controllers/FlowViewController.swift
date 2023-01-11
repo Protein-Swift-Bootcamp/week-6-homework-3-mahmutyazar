@@ -14,12 +14,7 @@ class FlowViewController: UIViewController {
     
     let apiKey = "D2SQEcAnGLdQxnrSFMT4J78qt3jbBG5G"
     
-    var results: [Result]? = []
-    
-    var captions: [String] = []
-    var imageUrls: [String] = []
-    
-    var multimedia: Multimedia?
+    var results: [NewCellModel] = []
     
     private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
@@ -54,36 +49,26 @@ class FlowViewController: UIViewController {
                     do {
                         let decoder = JSONDecoder()
                         decoder.dateDecodingStrategy = .formatted(self.dateFormatter)
-                        let news = try! decoder.decode(News.self, from: data)
                         
-                        self.results = news.results!
+                        let apiNews = try! decoder.decode(News.self, from: data)
                         
-                        if self.results!.count > 0 {
-                            let captions = self.results!.compactMap { new in
-                                return new.multimedia?.last?.caption
-                            }
-                            let imageUrl = self.results!.compactMap { new in
-                                return new.multimedia?.last?.url
-                            }
-                            var nonNilCaptions = captions.compactMap{$0}
-                            var nonNilUrls = imageUrl.compactMap{$0}
+                        guard let results = apiNews.results else {return}
+                        
+                        self.results = results.compactMap{
+                            guard let slugname = $0.slugName,
+                                  let imageUrl = $0.multimedia?.last?.url,
+                                  let caption = $0.multimedia?.last?.caption,
+                                  let newUrl = $0.url
+                            else {return nil}
                             
-                            let stringToRemove = ""
-                            for object in nonNilCaptions {
-                                if object == stringToRemove {
-                                    nonNilCaptions.remove(at: nonNilCaptions.firstIndex(of: stringToRemove)!)
-                                }
-                            }
-                            
-                            for url in nonNilUrls {
-                                if url == stringToRemove {
-                                    nonNilUrls.remove(at: nonNilUrls.firstIndex(of: stringToRemove)!)
-                                }
-                            }
-                            self.captions = nonNilCaptions
-                            self.imageUrls = nonNilUrls
+                            return .init(
+                                slugName: slugname,
+                                imageUrl: imageUrl,
+                                caption: caption,
+                                newUrl: newUrl
+                                )
                         }
-                        print(self.imageUrls)
+                        
                         DispatchQueue.main.async {
                             self.collectionView.reloadData()
                         }
@@ -123,7 +108,7 @@ extension FlowViewController: UICollectionViewDelegateFlowLayout{
 extension FlowViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("bana basıldı")
+        print(self.results[indexPath.row].imageUrl)
     }
     
 }
@@ -131,15 +116,14 @@ extension FlowViewController: UICollectionViewDelegate {
 extension FlowViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return captions.count
+        return self.results.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.captionLabel.text = captions[indexPath.row]
+        cell.captionLabel.text = self.results[indexPath.row].caption
         cell.clipsToBounds = true
         cell.layer.cornerRadius = 12
         return cell
     }
-    
 }

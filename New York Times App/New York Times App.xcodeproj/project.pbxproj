@@ -12,11 +12,12 @@
 		2A00A456296C2B6E00D9DCFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00A454296C2B6E00D9DCFC /* Main.storyboard */; };
 		2A00A458296C2B7000D9DCFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A00A457296C2B7000D9DCFC /* Assets.xcassets */; };
 		2A00A45B296C2B7000D9DCFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00A459296C2B7000D9DCFC /* LaunchScreen.storyboard */; };
-		2A00A463296C309500D9DCFC /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A462296C309500D9DCFC /* FlowViewController.swift */; };
 		2A00A467296C31B200D9DCFC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A466296C31B200D9DCFC /* WelcomeViewController.swift */; };
 		2A00A46A296C39A200D9DCFC /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A469296C39A200D9DCFC /* News.swift */; };
 		2A086B37296D732500F30E0E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A086B35296D732500F30E0E /* CollectionViewCell.swift */; };
 		2A086B38296D732500F30E0E /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A086B36296D732500F30E0E /* CollectionViewCell.xib */; };
+		2A086B3C296EFC9E00F30E0E /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A086B3B296EFC9E00F30E0E /* FlowViewController.swift */; };
+		2A9EBCBF296F1234001713CA /* NewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EBCBE296F1234001713CA /* NewCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +28,12 @@
 		2A00A457296C2B7000D9DCFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A00A45A296C2B7000D9DCFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A00A45C296C2B7000D9DCFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A00A462296C309500D9DCFC /* FlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
 		2A00A466296C31B200D9DCFC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2A00A469296C39A200D9DCFC /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		2A086B35296D732500F30E0E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2A086B36296D732500F30E0E /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		2A086B3B296EFC9E00F30E0E /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
+		2A9EBCBE296F1234001713CA /* NewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				2A00A466296C31B200D9DCFC /* WelcomeViewController.swift */,
-				2A00A462296C309500D9DCFC /* FlowViewController.swift */,
+				2A086B3B296EFC9E00F30E0E /* FlowViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2A00A469296C39A200D9DCFC /* News.swift */,
+				2A9EBCBE296F1234001713CA /* NewCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,9 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A00A44F296C2B6E00D9DCFC /* AppDelegate.swift in Sources */,
+				2A9EBCBF296F1234001713CA /* NewCellModel.swift in Sources */,
+				2A086B3C296EFC9E00F30E0E /* FlowViewController.swift in Sources */,
 				2A00A467296C31B200D9DCFC /* WelcomeViewController.swift in Sources */,
 				2A086B37296D732500F30E0E /* CollectionViewCell.swift in Sources */,
-				2A00A463296C309500D9DCFC /* FlowViewController.swift in Sources */,
 				2A00A46A296C39A200D9DCFC /* News.swift in Sources */,
 				2A00A451296C2B6E00D9DCFC /* SceneDelegate.swift in Sources */,
 			);
