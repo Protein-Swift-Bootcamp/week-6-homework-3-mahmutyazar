@@ -6,12 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct NewCellModel {
-    
     var slugName: String
     var imageUrl: String
     var caption: String
     var newUrl: String
-    
 }

@@ -25,6 +25,13 @@
                                     <action selector="startClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GA5-Hc-iXn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ödev yarıda kaldı :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-TA-Blh">
+                                <rect key="frame" x="119" y="203" width="151" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,12 +65,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8c7-mD-0ky">
                                 <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DGO-Ov-xc1">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
-                                </collectionViewFlowLayout>
+                                <collectionViewLayout key="collectionViewLayout" id="wy8-az-Zud" customClass="PinterestLayout" customModule="New_York_Times_App" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
                         </subviews>
@@ -86,6 +88,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldl-Pd-9M2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841.53846153846155" y="-28.436018957345969"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="na8-TN-rnK">
+            <objects>
+                <viewController storyboardIdentifier="WebVC" id="T76-7C-IVD" customClass="WebViewController" customModule="New_York_Times_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oYH-zF-fIg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eec-05-kx4">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="us9-zs-Dux"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="us9-zs-Dux" firstAttribute="trailing" secondItem="Eec-05-kx4" secondAttribute="trailing" id="Kl1-Kp-qJe"/>
+                            <constraint firstItem="us9-zs-Dux" firstAttribute="bottom" secondItem="Eec-05-kx4" secondAttribute="bottom" id="f5U-3g-qb7"/>
+                            <constraint firstItem="Eec-05-kx4" firstAttribute="top" secondItem="us9-zs-Dux" secondAttribute="top" id="qbT-UI-vh8"/>
+                            <constraint firstItem="Eec-05-kx4" firstAttribute="leading" secondItem="us9-zs-Dux" secondAttribute="leading" id="ugi-dn-4ov"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Eec-05-kx4" id="SH8-0i-V5a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fL-hI-HE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="-28"/>
         </scene>
     </scenes>
     <resources>

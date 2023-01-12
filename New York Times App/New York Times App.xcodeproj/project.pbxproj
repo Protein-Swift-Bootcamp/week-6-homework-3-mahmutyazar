@@ -14,10 +14,12 @@
 		2A00A45B296C2B7000D9DCFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00A459296C2B7000D9DCFC /* LaunchScreen.storyboard */; };
 		2A00A467296C31B200D9DCFC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A466296C31B200D9DCFC /* WelcomeViewController.swift */; };
 		2A00A46A296C39A200D9DCFC /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A469296C39A200D9DCFC /* News.swift */; };
-		2A086B37296D732500F30E0E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A086B35296D732500F30E0E /* CollectionViewCell.swift */; };
-		2A086B38296D732500F30E0E /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A086B36296D732500F30E0E /* CollectionViewCell.xib */; };
 		2A086B3C296EFC9E00F30E0E /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A086B3B296EFC9E00F30E0E /* FlowViewController.swift */; };
+		2A8B3EEA296F6C4800717D3E /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8B3EE9296F6C4800717D3E /* PinterestLayout.swift */; };
 		2A9EBCBF296F1234001713CA /* NewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EBCBE296F1234001713CA /* NewCellModel.swift */; };
+		2AE52F5329703104001A3D0A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE52F5129703104001A3D0A /* CollectionViewCell.swift */; };
+		2AE52F5429703104001A3D0A /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE52F5229703104001A3D0A /* CollectionViewCell.xib */; };
+		2AE52F5A297065A0001A3D0A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE52F59297065A0001A3D0A /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +32,12 @@
 		2A00A45C296C2B7000D9DCFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A00A466296C31B200D9DCFC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2A00A469296C39A200D9DCFC /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		2A086B35296D732500F30E0E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		2A086B36296D732500F30E0E /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		2A086B3B296EFC9E00F30E0E /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
+		2A8B3EE9296F6C4800717D3E /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		2A9EBCBE296F1234001713CA /* NewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCellModel.swift; sourceTree = "<group>"; };
+		2AE52F5129703104001A3D0A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2AE52F5229703104001A3D0A /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		2AE52F59297065A0001A3D0A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,7 @@
 				2A086B34296D72EF00F30E0E /* Cell */,
 				2A00A468296C398A00D9DCFC /* Model */,
 				2A00A464296C30CB00D9DCFC /* Delegates */,
-				2A00A465296C30D800D9DCFC /* Controllers */,
+				2A00A465296C30D800D9DCFC /* ViewControllers */,
 				2A00A454296C2B6E00D9DCFC /* Main.storyboard */,
 				2A00A459296C2B7000D9DCFC /* LaunchScreen.storyboard */,
 				2A00A457296C2B7000D9DCFC /* Assets.xcassets */,
@@ -87,13 +91,15 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		2A00A465296C30D800D9DCFC /* Controllers */ = {
+		2A00A465296C30D800D9DCFC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				2A00A466296C31B200D9DCFC /* WelcomeViewController.swift */,
 				2A086B3B296EFC9E00F30E0E /* FlowViewController.swift */,
+				2AE52F59297065A0001A3D0A /* WebViewController.swift */,
+				2A8B3EE9296F6C4800717D3E /* PinterestLayout.swift */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		2A00A468296C398A00D9DCFC /* Model */ = {
@@ -108,8 +114,8 @@
 		2A086B34296D72EF00F30E0E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2A086B35296D732500F30E0E /* CollectionViewCell.swift */,
-				2A086B36296D732500F30E0E /* CollectionViewCell.xib */,
+				2AE52F5129703104001A3D0A /* CollectionViewCell.swift */,
+				2AE52F5229703104001A3D0A /* CollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -174,7 +180,7 @@
 			files = (
 				2A00A45B296C2B7000D9DCFC /* LaunchScreen.storyboard in Resources */,
 				2A00A458296C2B7000D9DCFC /* Assets.xcassets in Resources */,
-				2A086B38296D732500F30E0E /* CollectionViewCell.xib in Resources */,
+				2AE52F5429703104001A3D0A /* CollectionViewCell.xib in Resources */,
 				2A00A456296C2B6E00D9DCFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,10 +193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A00A44F296C2B6E00D9DCFC /* AppDelegate.swift in Sources */,
+				2AE52F5A297065A0001A3D0A /* WebViewController.swift in Sources */,
 				2A9EBCBF296F1234001713CA /* NewCellModel.swift in Sources */,
+				2AE52F5329703104001A3D0A /* CollectionViewCell.swift in Sources */,
 				2A086B3C296EFC9E00F30E0E /* FlowViewController.swift in Sources */,
 				2A00A467296C31B200D9DCFC /* WelcomeViewController.swift in Sources */,
-				2A086B37296D732500F30E0E /* CollectionViewCell.swift in Sources */,
+				2A8B3EEA296F6C4800717D3E /* PinterestLayout.swift in Sources */,
 				2A00A46A296C39A200D9DCFC /* News.swift in Sources */,
 				2A00A451296C2B6E00D9DCFC /* SceneDelegate.swift in Sources */,
 			);
